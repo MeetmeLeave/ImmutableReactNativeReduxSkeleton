@@ -1,30 +1,16 @@
-import React, {Component, PropTypes} from 'react';
-import {Text,View,StyleSheet} from 'react-native';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import * as messageActions from '../actions';
+import React, {PropTypes} from 'react';
+import {ListView, StyleSheet} from 'react-native';
+import Message from './Message';
 
-class ListOfMessages extends Component {
-    render() {
-        return (
-             <View style={{margin: 128}}>
-                <Text>This is List of Messages!</Text>
-            </View>
-        );
-    }
+const ListOfMessages = ({listOfMessages}) => {
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    let dataSource = ds.cloneWithRows(listOfMessages);
+
+    return (
+        <ListView
+            dataSource={dataSource}
+            renderRow={(rowData) => <Message message={rowData}/>}/>
+    );
 }
 
-function mapStateToProps(state, ownProps) {
-    return {
-        ...state,
-        ...ownProps,
-    }
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(messageActions, dispatch)
-    };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ListOfMessages);
+export default ListOfMessages;
