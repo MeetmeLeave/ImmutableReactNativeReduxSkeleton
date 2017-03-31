@@ -15,10 +15,7 @@ import message from './message/components/';
 
 const Navigation = Actions.create(
     <Scene key="root">
-        <Scene
-            key="messages"
-            component={message.MessagesBoard}
-            title="Messages"/>
+        <Scene key="messages" component={message.MessagesBoard} title="Messages"/>
     </Scene>
 );
 
