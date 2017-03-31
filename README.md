@@ -5,5 +5,5 @@ React native skeleton project powered by redux, react-native-router-flux, web-so
 To run dummy sample execute following commands:
 ~~~~
 1: npm install
-2: react-native run-ios
+2: npm run ios OR npm run android
 3: npm run server
