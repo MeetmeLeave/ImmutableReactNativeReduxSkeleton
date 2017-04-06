@@ -10,6 +10,5 @@ export default () => {
     const store = compose(applyMiddleware(sagaMiddleware))(createStore)(rootReducer);
     sagaMiddleware.run(socketRootSaga);
     store.dispatch({type: commonActionTypes.INIT_ACTION_TYPE});
-
-    return store
-}
+    return store;
+};

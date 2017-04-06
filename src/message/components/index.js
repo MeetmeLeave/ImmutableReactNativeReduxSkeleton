@@ -6,4 +6,4 @@ export default {
     Message,
     ListOfMessages,
     MessagesBoard
-}
+};

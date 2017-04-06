@@ -3,7 +3,9 @@ import {ListView, StyleSheet} from 'react-native';
 import Message from './Message';
 
 const ListOfMessages = ({listOfMessages}) => {
-    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    const ds = new ListView.DataSource({
+        rowHasChanged: (r1, r2) => r1 !== r2
+    });
     let dataSource = ds.cloneWithRows(listOfMessages);
 
     return (
@@ -11,6 +13,10 @@ const ListOfMessages = ({listOfMessages}) => {
             dataSource={dataSource}
             renderRow={(rowData) => <Message message={rowData}/>}/>
     );
-}
+};
+
+ListOfMessages.propTypes = {
+    listOfMessages: PropTypes.array
+};
 
 export default ListOfMessages;

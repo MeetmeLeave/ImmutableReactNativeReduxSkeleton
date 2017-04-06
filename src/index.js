@@ -9,10 +9,13 @@ import initStore from './initStore';
 const App = () => {
     return (
         <Provider store={initStore()}>
-            <Router scenes={Navigation} sceneStyle={{ backgroundColor: 'white' }}>
-            </Router>
+            <Router
+                scenes={Navigation}
+                sceneStyle={{
+                backgroundColor: 'white'
+            }}/>
         </Provider>
     );
-}
+};
 
 export default App;

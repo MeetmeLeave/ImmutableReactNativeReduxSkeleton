@@ -18,12 +18,16 @@ class MessagesBoard extends Component {
     }
 }
 
+MessagesBoard.propTypes = {
+    messages: PropTypes.array
+};
+
 function mapStateToProps(state, ownProps) {
     return {
         messages: state
             .messages
             .toArray()
-    }
+    };
 }
 
 function mapDispatchToProps(dispatch) {
