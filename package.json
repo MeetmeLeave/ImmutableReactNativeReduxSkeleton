@@ -1,7 +1,8 @@
 {
-    "name": "ImmutableReactNativeReduxSkeleton",
-    "version": "0.0.1",
-    "private": true,
+    "name": "react-native-redux-ws-skeleton",
+    "version": "1.0.0",
+    "description": "Skeleton for react-native app using redux with Immutabe.js, flux-router and web sockets",
+    "private": false,
     "scripts": {
         "ios": "npm run lint && react-native run-ios",
         "android": "npm run lint && react-native run-android",
@@ -10,6 +11,8 @@
         "lint": "node_modules/.bin/esw webpack.config.* src tools",
         "server": "babel-node server/server.js"
     },
+    "author": "MeetmeLeave",
+    "license": "MIT",
     "dependencies": {
         "immutable": "^3.8.1",
         "react": "15.4.2",
@@ -34,5 +37,9 @@
     },
     "jest": {
         "preset": "react-native"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MeetmeLeave/react-native-redux-ws-skeleton.git"
     }
 }
