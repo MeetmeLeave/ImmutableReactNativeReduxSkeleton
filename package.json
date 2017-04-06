@@ -3,14 +3,14 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "ios": "react-native run-ios",
-        "android": "react-native run-android",
+        "ios": "npm run lint && react-native run-ios",
+        "android": "npm run lint && react-native run-android",
         "start": "node node_modules/react-native/local-cli/cli.js start",
         "test": "jest",
+        "lint": "node_modules/.bin/esw webpack.config.* src tools",
         "server": "babel-node server/server.js"
     },
     "dependencies": {
-        "babel-cli": "^6.24.0",
         "immutable": "^3.8.1",
         "react": "15.4.2",
         "react-native": "0.42.3",
@@ -22,10 +22,15 @@
         "ws": "^2.2.2"
     },
     "devDependencies": {
+        "babel-cli": "^6.24.0",
         "babel-jest": "19.0.0",
         "babel-preset-react-native": "1.9.1",
         "jest": "19.0.2",
-        "react-test-renderer": "15.4.2"
+        "react-test-renderer": "15.4.2",
+        "eslint": "^3.19.0",
+        "eslint-plugin-import": "^1.6.1",
+        "eslint-plugin-react": "^5.0.1",
+        "eslint-watch": "^3.0.1"
     },
     "jest": {
         "preset": "react-native"

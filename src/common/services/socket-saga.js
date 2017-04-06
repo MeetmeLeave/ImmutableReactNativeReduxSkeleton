@@ -6,6 +6,7 @@ import * as messagesActionTypes from '../../message/actionTypes';
 import * as messagesActions from '../../message/actions';
 
 /* eslint-disable no-constant-condition */
+/* eslint-disable require-yield */
 
 function connect() {
     const socket = new WebSocket('ws://localhost:8090');

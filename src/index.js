@@ -11,7 +11,7 @@ const App = () => {
         <Provider store={initStore()}>
             <Router scenes={Navigation} sceneStyle={{ backgroundColor: 'white' }}>
             </Router>
-        </Provider >
+        </Provider>
     );
 }
 
