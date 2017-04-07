@@ -9,7 +9,7 @@
         "start": "node node_modules/react-native/local-cli/cli.js start",
         "test": "jest",
         "lint": "node_modules/.bin/esw webpack.config.* src tools",
-        "server": "babel-node server/socket-server.js"
+        "server": "babel-node server/server.js"
     },
     "author": "MeetmeLeave",
     "license": "MIT",
